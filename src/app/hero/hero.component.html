@@ -1,0 +1,43 @@
+@if (onClickProject()) {
+    <app-project-modal (cancel)="onClose()"/>
+}
+<div class="min-h-screen flex flex-col justify-between">
+    <div
+        class="flex flex-col md:flex-row justify-between items-center w-[92%] mx-auto space-y-10 md:space-y-0 md:space-x-8 h-auto mt-5 md:mt-0">
+        <div class="flex flex-col space-y-6 flex-1">
+            <div class="space-y-2">
+                <div class="text-2xl font-medium sm:text-3xl text-center md:text-left">
+                    Hello,
+                </div>
+                <div class="text-2xl font-medium sm:text-3xl text-center md:text-left">
+                    I'm Mahmood Abdulfatai,
+                </div>
+                <div class="text-2xl font-medium sm:text-3xl text-center md:text-left">
+                    A Frontend <span class="text-lightRed font-semibold">Developer</span>
+                </div>
+            </div>
+
+            <div class="text-base font-medium text-center md:text-left leading-7">
+                I'm a dedicated front-end developer with expertise in Angular, TailwindCSS, and Figma, focused on
+                creating
+                dynamic, user-friendly websites. My work combines sleek, responsive design with robust functionality,
+                ensuring that every project not only looks great but also provides an exceptional user experience.
+            </div>
+            <div class="flex justify-center md:justify-start">
+                <button
+                    (click)="onStart()" class="flex text-base text-white font-medium justify-center items-center rounded bg-lightgrey w-[7rem] h-10">
+                    Projects
+                </button>
+            </div>
+
+        </div>
+
+        <div class="md:flex-1 flex justify-center md:justify-end w-full">
+            <img class="w-full h-auto max-w-xs md:max-w-full md:w-auto object-cover" src="coder.jpg" alt="Coder">
+        </div>
+    </div>
+
+    <footer class="flex justify-center py-5 border-t border-lightgrey mt-5">
+        <p class="text-base font-medium">&copy; 2024 Mahmood. All rights reserved.</p>
+    </footer>
+</div>

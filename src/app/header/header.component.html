@@ -1,0 +1,59 @@
+<header>
+    <nav class="flex justify-between items-center py-3 w-[92%] mx-auto">
+        <div class="text-xl md:text-2xl items-center font-semibold">Mahmood</div>
+        <!-- <div class=" nav-link md:static absolute md:min-h-fit  min-h-[60vh] left-0 top-[-100%] md:w-auto w-full flex items-center px-5"> -->
+        <div [ngClass]="{
+        'md:static': true,
+        'absolute': true,
+        'md:min-h-fit': true,
+        'min-h-[100%]': true,
+        'left-0': true,
+        'px-5': true,
+        flex: true,
+        'items-center': true,
+        'justify-center': true,
+        'w-full': true,
+        'top-[0%]': !iconShow(),
+        'top-[-100%]': iconShow(),
+        'bg-white': !iconShow(),
+        'md:w-auto': true,
+        'duration-500': true,
+        
+      }">
+            <ul class="flex items-center md:flex-row flex-col md:items-center md:gap-[4vw] gap-12">
+                <li class="text-sm sm:text-base font-semibold hover:text-lightRed" >
+                    <a href="https://www.linkedin.com/in/abdulfatai-mahmood-4b7781303/" appSafeLink="mahmood-linkd-link">Linkedin</a>
+                </li>
+                <li class="text-sm sm:text-base font-semibold hover:text-lightRed" >
+                    <a href="https://www.instagram.com/a_b_d_u_l_f_a_t_a_i/?hl=en" appSafeLink="mahmood-ig-link">Instagram</a>
+                </li>
+                <li class="text-sm sm:text-base font-semibold hover:text-lightRed" >
+                    <a href="https://x.com/meh_mud" appSafeLink="mahmood-twitter-link">Twitter</a>
+                </li>
+                <li class="text-sm sm:text-base font-semibold hover:text-lightRed" >
+                    <a href="tel:+2348131861375" appSafeLink>Phone</a>
+                </li>
+                <li class="text-sm sm:text-base font-semibold hover:text-lightRed" >
+                    <a href="mailto:abdulfataimahmood15@gmail.com" appSafeLink="mahmood-email-link" >Mail</a>
+                </li>
+            </ul>
+        </div>
+        <div class="md:hidden z-20 relative">
+            <button (click)="onToggle()" class="cursor-pointer">
+                @if (iconShow()) {
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+
+                }@else {
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+                </svg>
+                }
+            </button>
+        </div>
+    </nav>
+</header>
